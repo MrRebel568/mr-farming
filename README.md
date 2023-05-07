@@ -4,7 +4,7 @@ Farming script for QBCore
 
 # Farmings
 - Optimized
-- 7 Farms
+- 5 Farms
 - Easy to use config
 - The ability to change notification language
 - Toggle Blips Option (Config)
