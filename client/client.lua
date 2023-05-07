@@ -179,7 +179,7 @@ RegisterNetEvent('mr-farming:client:Strawberriefarm', function()
     end, 'farming_hoe')
 end)
 
-RegisterNetEvent('mr-farming:client:ApanharLaranjas', function(data)
+RegisterNetEvent('mr-farming:client:appletree', function(data)
     local ped = PlayerPedId()
 QBCore.Functions.TriggerCallback('QBCore:HasItem', function(HasItem)
     if HasItem then
