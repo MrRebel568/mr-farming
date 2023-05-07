@@ -6,7 +6,7 @@ Citizen.CreateThread(function()
     }, {
         options = {
             {  
-            event = "mr-farming:client:ApanharLaranjas",
+            event = "mr-farming:client:appletree",
             icon = Config.Alerts["IconProcessar"],
             label = Config.Alerts["TakeApples"],
             },
@@ -21,7 +21,7 @@ Citizen.CreateThread(function()
     }, {
         options = {
             {  
-            event = "mr-farming:client:ApanharLaranjas",
+            event = "mr-farming:client:appletree",
             icon = Config.Alerts["IconProcessar"],
             label = Config.Alerts["TakeApples"],
             },
@@ -36,7 +36,7 @@ Citizen.CreateThread(function()
     }, {
         options = {
             {  
-            event = "mr-farming:client:ApanharLaranjas",
+            event = "mr-farming:client:appletree",
             icon = Config.Alerts["IconProcessar"],
             label = Config.Alerts["TakeApples"],
             },
@@ -51,7 +51,7 @@ Citizen.CreateThread(function()
     }, {
         options = {
             {  
-            event = "mr-farming:client:ApanharLaranjas",
+            event = "mr-farming:client:appletree",
             icon = Config.Alerts["IconProcessar"],
             label = Config.Alerts["TakeApples"],
             },
@@ -66,7 +66,7 @@ Citizen.CreateThread(function()
     }, {
         options = {
             {  
-            event = "mr-farming:client:ApanharLaranjas",
+            event = "mr-farming:client:appletree",
             icon = Config.Alerts["IconProcessar"],
             label = Config.Alerts["TakeApples"],
             },
@@ -81,7 +81,7 @@ Citizen.CreateThread(function()
     }, {
         options = {
             {  
-            event = "mr-farming:client:ApanharLaranjas",
+            event = "mr-farming:client:appletree",
             icon = Config.Alerts["IconProcessar"],
             label = Config.Alerts["TakeApples"],
             },
@@ -96,7 +96,7 @@ Citizen.CreateThread(function()
     }, {
         options = {
             {  
-            event = "mr-farming:client:ApanharLaranjas",
+            event = "mr-farming:client:appletree",
             icon = Config.Alerts["IconProcessar"],
             label = Config.Alerts["TakeApples"],
             },
@@ -111,7 +111,7 @@ Citizen.CreateThread(function()
     }, {
         options = {
             {  
-            event = "mr-farming:client:ApanharLaranjas",
+            event = "mr-farming:client:appletree",
             icon = Config.Alerts["IconProcessar"],
             label = Config.Alerts["TakeApples"],
             },
@@ -126,7 +126,7 @@ Citizen.CreateThread(function()
     }, {
         options = {
             {  
-            event = "mr-farming:client:ApanharLaranjas",
+            event = "mr-farming:client:appletree",
             icon = Config.Alerts["IconProcessar"],
             label = Config.Alerts["TakeApples"],
             },
@@ -141,7 +141,7 @@ Citizen.CreateThread(function()
     }, {
         options = {
             {  
-            event = "mr-farming:client:ApanharLaranjas",
+            event = "mr-farming:client:appletree",
             icon = Config.Alerts["IconProcessar"],
             label = Config.Alerts["TakeApples"],
             },
@@ -156,7 +156,7 @@ Citizen.CreateThread(function()
     }, {
         options = {
             {  
-            event = "mr-farming:client:ApanharLaranjas",
+            event = "mr-farming:client:appletree",
             icon = Config.Alerts["IconProcessar"],
             label = Config.Alerts["TakeApples"],
             },
@@ -171,7 +171,7 @@ Citizen.CreateThread(function()
     }, {
         options = {
             {  
-            event = "mr-farming:client:ApanharLaranjas",
+            event = "mr-farming:client:appletree",
             icon = Config.Alerts["IconProcessar"],
             label = Config.Alerts["TakeApples"],
             },
@@ -186,7 +186,7 @@ Citizen.CreateThread(function()
     }, {
         options = {
             {  
-            event = "mr-farming:client:ApanharLaranjas",
+            event = "mr-farming:client:appletree",
             icon = Config.Alerts["IconProcessar"],
             label = Config.Alerts["TakeApples"],
             },
@@ -201,7 +201,7 @@ Citizen.CreateThread(function()
     }, {
         options = {
             {  
-            event = "mr-farming:client:ApanharLaranjas",
+            event = "mr-farming:client:appletree",
             icon = Config.Alerts["IconProcessar"],
             label = Config.Alerts["TakeApples"],
             },
@@ -216,7 +216,7 @@ Citizen.CreateThread(function()
     }, {
         options = {
             {  
-            event = "mr-farming:client:ApanharLaranjas",
+            event = "mr-farming:client:appletree",
             icon = Config.Alerts["IconProcessar"],
             label = Config.Alerts["TakeApples"],
             },
@@ -231,7 +231,7 @@ Citizen.CreateThread(function()
     }, {
         options = {
             {  
-            event = "mr-farming:client:ApanharLaranjas",
+            event = "mr-farming:client:appletree",
             icon = Config.Alerts["IconProcessar"],
             label = Config.Alerts["TakeApples"],
             },
