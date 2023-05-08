@@ -51,4 +51,4 @@ Farming script for QBCore
 https://youtu.be/qZ1eQfoshZY
 
 ## Discord
-- [Join Discord](https://discord.gg/T2xX5WwmEX)
+- [Join Discord](https://discord.gg/3s8UjM7ufW)
