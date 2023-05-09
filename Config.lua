@@ -12,28 +12,31 @@ Config.QBLock = "ps-ui"
 Config.Payment = "bank" --cash/bank
 
 --Blips
-Config.BlipFarmBoss = vector3(2309.68, 4885.79, 41.81)
-Config.BlipFarmBossName = "Farming"
--- Blips Farmer Boss
-Config.BlipPlantasCoffee = vector3(2298.27, 5140.95, 52.49)
-Config.BlipCoffeeName = "Farm Coffee"
--- Blips Pick Up Seeds Batata
-Config.BlipPlantasPotatoe = vector3(2138.98, 5143.56, 50.07)
-Config.BlipPotatoeName = "Farm Potatoes"
--- Blips Pick Up Seeds Morangos
-Config.BlipPlantasstrawberrie = vector3(262.12, 6652.21, 29.92)
-Config.BlipstrawberrieName = "Farm Strawberry"
--- Blips Pick Up Milk
-Config.BlipPlantasVacas = vector3(2144.34, 4991.85, 41.37)
-Config.BlipVacasName = "Farm Milk"
--- Blips Process Coffee Seeds
-Config.BlipProcessName = "Process Seeds"
--- Blips Process Apple Seeds
-Config.BlipPlantasFarm = vector3(352.43, 6520.76, 28.48)
-Config.BlipFarmName = "Farm Apples / Oranges"
--- Blips Make Juices
-Config.BlipJuices = vector3(2016.89, 4986.67, 42.1)
-Config.BlipMakeJuices = "Make Juices"
+Config.Blips = {
+    -- Job ped
+    {title = 'Farming', colour = 5, id = 1, coords = vector3(2309.68, 4885.79, 41.81), scale = 0.6, useblip = true},
+    -- Blips Farmer Coffee
+    {title = 'Farm Coffee', colour = 5, id = 1, coords = vector3(2298.27, 5140.95, 52.49), scale = 0.6, useblip = true},
+    -- Blips Pick Up Seeds Potatoes
+    {title = 'Farm Potatoes', colour = 5, id = 1, coords = vector3(2138.98, 5143.56, 50.07), scale = 0.6, useblip = true},
+    -- Blips Pick Up Seeds Strawberry
+    {title = 'Farm Strawberry', colour = 5, id = 1, coords = vector3(262.12, 6652.21, 29.92), scale = 0.6, useblip = true},
+    -- Processing
+    {title = 'Process Seeds', colour = 5, id = 1, coords = vector3(2406.68, 5019.28, 46.15), scale = 0.6, useblip = true},
+    -- Blips Process Apple Seeds
+    {title = 'Farm Apples / Oranges', colour = 5, id = 1, coords = vector3(352.43, 6520.76, 28.48), scale = 0.6, useblip = true},
+    -- Blips Make Juices
+    {title = 'Make Juices', colour = 5, id = 1, coords = vector3(2016.89, 4986.67, 42.1), scale = 0.6, useblip = true},
+}
+
+-- Ped settings
+Config.Peds = {
+    -- Start
+    {coords = vector4(2310.05, 4884.79, 41.81, 50.81), model = 's_m_y_garbage', scenario = 'WORLD_HUMAN_SMOKING'},
+    -- Make Juices
+    {coords = vector4(2016.59, 4987.79, 42.1, 174.61), model = 's_m_y_garbage', scenario = 'WORLD_HUMAN_SMOKING'},
+}
+
 
 -- Car
 Config.Fuel = "LegacyFuel"                                          -- Name of your fuel script
