@@ -6,7 +6,8 @@ description 'Farming For QB-Core (mr-script)'
 version '1.2.0'
 
 client_scripts {
-    'client/*.lua',
+    'client/client.lua',
+    'client/trees.lua',
     '@PolyZone/client.lua',
 	'@PolyZone/BoxZone.lua',
 	'@PolyZone/EntityZone.lua',
@@ -14,9 +15,9 @@ client_scripts {
 	'@PolyZone/ComboZone.lua'
 }
 
-shared_scripts {'config.lua'}
+shared_scripts {'Config.lua'}
 
-server_scripts {'server/*.lua'}
+server_scripts {'server/server.lua'}
 
 dependencies {
     'PolyZone',
