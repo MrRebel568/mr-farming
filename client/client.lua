@@ -43,6 +43,36 @@ RegisterNetEvent('mr-farming:client:strawberryjuice', function()
     TriggerServerEvent('mr-farming:server:strawberryjuicesv')
 end)
 
+--Blips/Peds
+CreateThread(function()
+    for k, v in pairs(Config.Peds) do
+        RequestModel(GetHashKey(v.model))
+        while not HasModelLoaded(GetHashKey(v.model)) do
+            Wait(1)
+        end
+        KetaminePeds = CreatePed(0, v.model, v['coords'].x, v['coords'].y, v['coords'].z-1, v['coords'].w, false, false)
+        FreezeEntityPosition(KetaminePeds, true)
+        SetEntityInvincible(KetaminePeds, true)
+        SetBlockingOfNonTemporaryEvents(KetaminePeds, true)
+    end
+end)
+
+CreateThread(function()
+    for k, v in pairs(Config.Blips) do
+        if v.useblip then
+            v.blip = AddBlipForCoord(v['coords'].x, v['coords'].y, v['coords'].z)
+            SetBlipSprite(v.blip, v.id)
+            SetBlipDisplay(v.blip, 4)
+            SetBlipScale(v.blip, v.scale)
+            SetBlipColour(v.blip, v.colour)
+            SetBlipAsShortRange(v.blip, true)
+            BeginTextCommandSetBlipName('STRING')
+            AddTextComponentString(v.title)
+            EndTextCommandSetBlipName(v.blip)
+        end
+    end
+end)
+
 RegisterNetEvent('mr-farming:client:Putvehicle', function()
     local MR = PlayerPedId()
     local vehicle = GetVehiclePedIsIn(MR,true)
@@ -274,106 +304,6 @@ RegisterNetEvent('mr-farming:client:processpatato', function()
         end, 3,10) -- NumberOfCircles, MS
     end)
 end)
-
---Blips/Peds
-
-CreateThread(function()
-    RequestModel("s_m_y_garbage")
-      while not HasModelLoaded("s_m_y_garbage") do
-      Wait(1)
-    end
-      MRboss = CreatePed(2, "s_m_y_garbage", 2310.05, 4884.79, 40.81, 46.66, false, false) 
-      SetPedFleeAttributes(MRboss, 0, 0)
-      SetPedDiesWhenInjured(MRboss, false)
-      TaskStartScenarioInPlace(MRboss, "WORLD_HUMAN_STAND_IMPATIENT", 0, true)
-      SetPedKeepTask(MRboss, true)
-      SetBlockingOfNonTemporaryEvents(MRboss, true)
-      SetEntityInvincible(MRboss, true)
-      FreezeEntityPosition(MRboss, true)
-
-      MRboss = CreatePed(2, "s_m_y_garbage", 2016.59, 4987.79, 41.1, 183.4, false, false) 
-      SetPedFleeAttributes(MRboss, 0, 0)
-      SetPedDiesWhenInjured(MRboss, false)
-      TaskStartScenarioInPlace(MRboss, "WORLD_HUMAN_STAND_IMPATIENT", 0, true)
-      SetPedKeepTask(MRboss, true)
-      SetBlockingOfNonTemporaryEvents(MRboss, true)
-      SetEntityInvincible(MRboss, true)
-      FreezeEntityPosition(MRboss, true)
-end)
-
-CreateThread(function()
-    MRBlip = AddBlipForCoord(Config.BlipFarmBoss)
-    SetBlipSprite (MRblip, 78)
-    SetBlipDisplay(MRblip, 2)
-    SetBlipScale  (MRblip, 0.7)
-    SetBlipAsShortRange(MRBlip, true)
-    SetBlipColour(MRblip, 1)
-    BeginTextCommandSetBlipName("STRING")
-    AddTextComponentSubstringPlayerName(Config.BlipFarmBossName)
-    EndTextCommandSetBlipName(MRBlip)
-
-    MRBlip = AddBlipForCoord(Config.BlipPlantasCoffee)
-    SetBlipSprite (MRblip, 78)
-    SetBlipDisplay(MRblip, 2)
-    SetBlipScale  (MRblip, 0.7)
-    SetBlipAsShortRange(MRBlip, true)
-    SetBlipColour(MRblip, 1)
-    BeginTextCommandSetBlipName("STRING")
-    AddTextComponentSubstringPlayerName(Config.BlipCoffeeName)
-    EndTextCommandSetBlipName(MRBlip)
-
-    MRBlip = AddBlipForCoord(Config.BlipPlantasPotatoe)
-    SetBlipSprite (MRblip, 78)
-    SetBlipDisplay(MRblip, 2)
-    SetBlipScale  (MRblip, 0.7)
-    SetBlipAsShortRange(MRBlip, true)
-    SetBlipColour(MRblip, 1)
-    BeginTextCommandSetBlipName("STRING")
-    AddTextComponentSubstringPlayerName(Config.BlipPotatoeName)
-    EndTextCommandSetBlipName(MRBlip)
-
-    MRBlip = AddBlipForCoord(Config.BlipPlantasstrawberrie)
-    SetBlipSprite (MRblip, 78)
-    SetBlipDisplay(MRblip, 2)
-    SetBlipScale  (MRblip, 0.7)
-    SetBlipAsShortRange(MRBlip, true)
-    SetBlipColour(MRblip, 1)
-    BeginTextCommandSetBlipName("STRING")
-    AddTextComponentSubstringPlayerName(Config.BlipstrawberrieName)
-    EndTextCommandSetBlipName(MRBlip)
-
-    MRBlip = AddBlipForCoord(Config.BlipJuices)
-    SetBlipSprite (MRblip, 78)
-    SetBlipDisplay(MRblip, 2)
-    SetBlipScale  (MRblip, 0.7)
-    SetBlipAsShortRange(MRBlip, true)
-    SetBlipColour(MRblip, 1)
-    BeginTextCommandSetBlipName("STRING")
-    AddTextComponentSubstringPlayerName(Config.BlipMakeJuices)
-    EndTextCommandSetBlipName(MRBlip)
-
-    MRBlip = AddBlipForCoord(Config.BlipPlantasFarm)
-    SetBlipSprite (MRblip, 78)
-    SetBlipDisplay(MRblip, 2)
-    SetBlipScale  (MRblip, 0.7)
-    SetBlipAsShortRange(MRBlip, true)
-    SetBlipColour(MRblip, 1)
-    BeginTextCommandSetBlipName("STRING")
-    AddTextComponentSubstringPlayerName(Config.BlipFarmName)
-    EndTextCommandSetBlipName(MRBlip)
-
-    MRBlip = AddBlipForCoord(2406.68, 5019.28, 46.15)
-    SetBlipSprite (MRblip, 78)
-    SetBlipDisplay(MRblip, 2)
-    SetBlipScale  (MRblip, 0.7)
-    SetBlipAsShortRange(MRBlip, true)
-    SetBlipColour(MRblip, 1)
-    BeginTextCommandSetBlipName("STRING")
-    AddTextComponentSubstringPlayerName(Config.BlipProcessName)
-    EndTextCommandSetBlipName(MRBlip)
-end)
-
-
 
 --coffee-farming--
 CreateThread(function ()
